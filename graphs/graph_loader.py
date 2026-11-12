@@ -5,6 +5,10 @@ from graphs.undirected_graph import UndirectedGraph
 
 
 def load_graph_from_file(file_path, directed=False):
+    """Read a CSV file with the header source,target,weight and return a graph (workshop point 5).
+
+    Returns an UndirectedGraph by default, or a DirectedGraph if directed=True.
+    """
     if directed:
         graph = DirectedGraph()
     else:
