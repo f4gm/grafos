@@ -2,12 +2,19 @@
 
 Proyecto de Matemáticas Discretas II, Entrega 1.
 
+## Integrantes
+
+- Santiago Hurtado Rodríguez - 202538363
+- Fernando Andrés Giraldo Mejía - 202537774
+
 ## Archivos
 
-- `graphs/undirected_graph.py`: grafo no dirigido (lista de adyacencia).
 - `graphs/directed_graph.py`: grafo dirigido (matriz de adyacencia).
+- `graphs/undirected_graph.py`: grafo no dirigido (lista de adyacencia).
 - `graphs/graph_loader.py`: carga un grafo desde un CSV.
-- `ejemplo_1.csv` a `ejemplo_6.csv`: archivos de prueba.
+- `graphs/plot_graph.py`: función útil para imprimir un grafo dirigido o no dirigido.
+- `csv/ejemplo_1.csv` a `csv/ejemplo_6.csv`: archivos de prueba.
+- `ejemplo_1.ipynb` a `ejemplo_1.ipynb`: notebooks con pruebas de las clases y sus métodos sobre cada archivo CSV de prueba.
 
 ## Uso
 
@@ -29,8 +36,6 @@ La lista de adyacencia fue la parte más fácil. Un diccionario de diccionarios 
 
 La matriz costó más. Cada vez que aparece un vértice nuevo hay que agregar una fila y una columna, y para buscar la posición de un vértice usamos `list.index`, que recorre la lista completa. Por eso, con grafos grandes, esta implementación sería lenta. Un diccionario que guarde la posición de cada vértice lo mejoraría, pero preferimos mantener el código simple.
 
-Probamos la carga con los archivos `ejemplo_1.csv` y `ejemplo_6.csv`, y los resultados coincidieron con lo que esperábamos. Un problema que tuvimos fue que los vértices se guardan como texto, así que hay que consultarlos con `"1"` y no con `1`. Lo aprendimos al probar el código.
+Probamos la carga con los archivos `ejemplo_1.csv` a `ejemplo_6.csv`, y los resultados coincidieron con lo que esperábamos. Un problema que tuvimos fue que los vértices se guardan como texto, así que hay que consultarlos con `"1"` y no con `1`. Lo aprendimos al probar el código.
 
 Otra decisión fue no validar errores. Si el CSV está mal escrito, Python muestra el error tal cual. Esto hace el código más corto, pero para un proyecto más grande habría que agregar validaciones.
-
-
